@@ -1,0 +1,7 @@
+# Ignore files incluing personal information and build outputs
+*.exe
+*.pdf
+
+# But add questions.pdf back
+!hw1/hw1_questions.pdf
+!hw2/hw2_questions.pdf
