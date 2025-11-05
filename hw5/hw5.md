@@ -63,7 +63,56 @@ DONE    TRAP x25        ;
 - 综上，R0 = x43FE
 
 ## T6
+| 周期   | 状态 | 总线   | 该周期的重要控制信号                                      |
+|--------|------|------|------------------------------------------------------|
+| T      | 18   | x3010| LD.MAR=1, LD.PC=1, PCMux=PC+1, GatePC=1              |
+| T+4    | 35   | xA202|       LD.IR, GateMDR=1, LD.MDR=1                     |
+| T+6    | 2    | x3013|LD.MAR=1, LD.IR=1, ADDR1MUX, ADDR2MUX=SEXT[8:0], GateMARMUX=1                                               |
+| T+10   | 35   | x4567|     GateMDR=1, LD.MDR=1, LD.MAR=1                                                 |
+| T+14   | 1    | x0000|LD.REG=1, DR=001, LD.CC=1, GateMDR=1                                                      |
 
+
+(1) 如上表所示.
+
+(2)正在处理`LDI R1, PCoffset`，其中`PCoffset`=`000000010`.
+
+(3) 在`x3010`.
+
+(4) 需要`4`个时钟周期.
+
+(5) `[x3010]` = `xA202`
+    `[x3013]` = `x4567`
+    `[x4567]` = `x0000`
+    
 ## T7
-
+填写如下:
+```assembly
+        .ORIG x3000
+        LD R0, A               
+        LD R1, B
+AGAIN   BRz DONE                
+        ADD R0, R0, R0
+        ADD R1, R1, #-1                       
+        BRnzp AGAIN
+DONE    ST R0, A                
+        HALT                    
+A       .FILL x0C00
+B       .FILL x0001
+        .END
+```
+表格如下:
+![alt text](figs/image0.png)
+计算`A*(B+1)`的值.
 ## T8
+
+```assembly
+ADD R2, R0, #0
+LDR R0, R2, #1
+TRAP x21
+LDR Ro, R2, #1
+LDR R1, R0, #1
+STR R1, R2, #1
+LDR R0, R0, #0
+STR R0, R2, #1
+RET
+```
