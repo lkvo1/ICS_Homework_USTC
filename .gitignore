@@ -1,6 +1,7 @@
 # Ignore files incluing personal information and build outputs
 *.exe
 *.pdf
+*.zip
 # But add questions.pdf back
 !hw1/hw1_questions.pdf
 !hw2/hw2_questions.pdf
@@ -9,3 +10,4 @@
 !hw5/hw5_questions.pdf
 !hw6/hw6_questions.pdf
 !hw7/hw7_questions.pdf
+!lab1/lab1_assignments.pdf
