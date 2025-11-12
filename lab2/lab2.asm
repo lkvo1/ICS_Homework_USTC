@@ -10,8 +10,9 @@
         ADD R0, R0, #-2     ; R0 = N - 2
         BRnz SKIP   ; If N <= 2, skip the loop
 
-        AND R1, R1, #0      ; Clear R1 to use as Q[i - Q[i-1]] (q1)
-        AND R2, R2, #0      ; Clear R2 to use as Q[i - Q[i-2]] (q2)
+        AND R1, R1, #0      ; Clear R1 as q
+        AND R2, R2, #0      ; Clear R2 as v
+        AND R4, R4, #0      ; Clear R4 as t
 
         AND R0, R0, #0      ; Clear R0 to store i as iterator
         LD R0, VALUE        ; Load N into R0
@@ -19,22 +20,37 @@
         NOT R0, R0
         ADD R0, R0, #1      ; set R0 = -(N - 2) as LOOP counter (better for get value in RESULT)
 
-; LDR Rx, R3, R0  ; Load RESULT[i] into Rx
+                            ; LDR Rx, R3, Ry  ; Load RESULT[[Ry]]] into Rx
 LOOP    BRz DONE
+        AND R2, R2, #0      ; Clear R2 for v storage
+
+
+STEP1   ADD R4, R0, #-1     ; t1 = i - 1
+        LDR R1, R3, R4      ; q1 = Q(i - 1)
+
+        NOT R1, R1          
+        ADD R1, R1, #1      ; R1 = -q1
+        ADD R4, R0, R1      ; R4 = t1 = i - q1
         
-        ; load q1 = Q(i - 1)
-        AND R1, R1, #0
-        LDR R1, R3, R0       ; q1 = Q[i - 1]
+        LDR R4, R3, R4      ; R4 = Q(t1)
+
+        ADD R2, R2, R4      ; R2 += v1
+
+
+STEP2   ADD R4, R0, #-2     ; t2 = i - 2
+        LDR R1, R3, R4      ; q2 = Q(i - 2)
 
         NOT R1, R1
-        ADD R1, R1, #1       ; R1 = -q1
+        ADD R1, R1, #1      ; R1 = -q2
+        ADD R4, R0, R1      ; R4 = t = i - q2
 
-        AND R4, R4, #0       ; Clear t1
-        ADD R4, R0, R1       ; t1 = i - q1
+        LDR R4, R3, R4      ; R4 = Q(t2)
+
+        ADD R2, R2, R4      ; R2 += v2  now we have v1 + v2 in R2
 
 
-
-        ADD R0, R0 , #1      ; i = i + 1
+STEP3   STR R2, R3, R0      ; Store v into Q(i)
+        ADD R0, R0 , #1     ; i = i + 1
         BRnzp LOOP
 
 SKIP    AND R0, R0, #0      ; Clear R0
