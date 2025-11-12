@@ -61,15 +61,6 @@ I first write the assembly language according to the requirements, and then conv
 
 The results are as follows:
 
-### R1 = 5, R2 = 10, Cond = 0
-
-![image-20251106220048083](C:\Users\Likvo\AppData\Roaming\Typora\typora-user-images\image-20251106220048083.png)
-
+### R1 = 5,  R2 = 10, Cond = 0
 ### R1 = 14， R2 = 3, Cond = 0
-
-![image-20251106220316293](C:\Users\Likvo\AppData\Roaming\Typora\typora-user-images\image-20251106220316293.png)
-
 ### R1 = 14， R2 = 3, Cond = 1
-
-![image-20251106220358252](C:\Users\Likvo\AppData\Roaming\Typora\typora-user-images\image-20251106220358252.png)
-
