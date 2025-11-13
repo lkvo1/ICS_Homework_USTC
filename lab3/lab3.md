@@ -1,11 +1,5 @@
 # ICS Lab3
 
-<center>
-    霍斌 PB24111627
-</center>
-
-
-
 ## Assembly Code
 
 ```assembly
