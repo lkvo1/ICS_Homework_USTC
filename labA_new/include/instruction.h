@@ -15,6 +15,8 @@ public:
     void addToken(const Token& token) {tokens_.push_back(token); }
     std::vector<Token> getTokens() const { return tokens_; }
     void setAddress(uint16_t addr) { address_ = addr; }
+    uint16_t getAddress() const { return address_; }
+    void removeLabel() { tokens_.erase(tokens_.begin()); }
 };
 
 

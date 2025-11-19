@@ -45,13 +45,15 @@ bool isOpType(const std::string& str) {
         str == "LEA" || str == "NOT" || str == "RET" || str == "RTI" || 
         str == "STI" || str == "ST" || str == "STR" || str == "TRAP" ||
         str == "LDI" || str == "BRn" || str == "BRz" || str == "BRp" || 
-        str == "BRnz" || str == "BRnp" || str == "BRzp" || str == "BRnnzp") return true;
+        str == "BRnz" || str == "BRnp" || str == "BRzp" || str == "BRnzp") return true;
     return false;
 }
 
 bool isPsdType(const std::string& str) {
     if (str == ".ORIG" || str == ".END" || str == "IN" || str == "OUT" || 
-        str == "PUTSP" || str == ".FILL" || str == ".BLKW" || str == ".STRINGZ") return true;
+        str == "PUTSP" || str == ".FILL" || str == ".BLKW" || str == ".STRINGZ" ||
+        str == "HALT"  || str == "IN"    || str == "OUT"   || str == "PUTS" || 
+        str == "GETC" ) return true;
     return false;
 }
 

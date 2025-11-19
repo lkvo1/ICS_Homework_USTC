@@ -5,7 +5,7 @@
 
 int main() {
     // 格式化汇编文件
-    std::string asmFilePath = "example.asm";
+    std::string asmFilePath = "test.asm";
     formatAssembly(asmFilePath);
 
     std::string formattedFilePath = asmFilePath + ".fmt";
@@ -16,7 +16,7 @@ int main() {
     // parsing
     Parser parser;
     parser.firstPass(tokens);
-    // parser.secondPass(tokens);
-    // parser.assemble();
+    parser.secondPass();
+    parser.assemble();
     return 0;
 }

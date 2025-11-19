@@ -5,24 +5,17 @@ Token Type: EOL, Value: 0, StrValue:
 Token Type: OP, Value: 14, StrValue: LEA
 Token Type: REG, Value: 0, StrValue: R0
 Token Type: CM, Value: 0, StrValue: ,
-Token Type: LBL, Value: 0, StrValue: AAA
+Token Type: LBL, Value: 0, StrValue: HACKER
 Token Type: EOL, Value: 0, StrValue: 
 
 Token Type: OP, Value: 15, StrValue: TRAP
 Token Type: IMM, Value: 48, StrValue: x30
 Token Type: EOL, Value: 0, StrValue: 
 
-Token Type: LBL, Value: 0, StrValue: SHABI
-Token Type: PSD, Value: 13, StrValue: .BLKW
-Token Type: NUM, Value: 2, StrValue: 2
+Token Type: PSD, Value: 13, StrValue: PUTSP
 Token Type: EOL, Value: 0, StrValue: 
 
-Token Type: OP, Value: 14, StrValue: LEA
-Token Type: REG, Value: 0, StrValue: R0
-Token Type: CM, Value: 0, StrValue: ,
-Token Type: LBL, Value: 0, StrValue: SHABI
-Token Type: EOL, Value: 0, StrValue: 
-
+Token Type: LBL, Value: 0, StrValue: HACKER
 Token Type: PSD, Value: 13, StrValue: .FILL
 Token Type: IMM, Value: 51, StrValue: x0033
 Token Type: EOL, Value: 0, StrValue: 
@@ -35,14 +28,16 @@ Token Type: PSD, Value: 13, StrValue: .FILL
 Token Type: IMM, Value: 51, StrValue: x0033
 Token Type: EOL, Value: 0, StrValue: 
 
-Token Type: LBL, Value: 0, StrValue: AAA
-Token Type: PSD, Value: 13, StrValue: .STRINGZ
-Token Type: STR, Value: 0, StrValue: aaa
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
 Token Type: EOL, Value: 0, StrValue: 
 
-Token Type: LBL, Value: 0, StrValue: NAOZI
 Token Type: PSD, Value: 13, StrValue: .FILL
-Token Type: IMM, Value: 68, StrValue: x0044
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
 Token Type: EOL, Value: 0, StrValue: 
 
 Token Type: PSD, Value: 13, StrValue: .FILL
@@ -120,21 +115,7 @@ Token Type: PSD, Value: 13, StrValue: .FILL
 Token Type: IMM, Value: 0, StrValue: x0000
 Token Type: EOL, Value: 0, StrValue: 
 
-Token Type: PSD, Value: 13, StrValue: .END
-Token Type: EOL, Value: 0, StrValue: 
-
-Token Type: PSD, Value: 13, StrValue: .ORIG
-Token Type: IMM, Value: 48, StrValue: x30
-Token Type: EOL, Value: 0, StrValue: 
-
 Token Type: PSD, Value: 13, StrValue: .FILL
-Token Type: IMM, Value: 2352, StrValue: x930
-Token Type: EOL, Value: 0, StrValue: 
-
-Token Type: PSD, Value: 13, StrValue: .END
-Token Type: EOL, Value: 0, StrValue: 
-
-Token Type: PSD, Value: 13, StrValue: .ORIG
 Token Type: IMM, Value: 2352, StrValue: x930
 Token Type: EOL, Value: 0, StrValue: 
 
@@ -245,13 +226,6 @@ Token Type: PSD, Value: 13, StrValue: .BLKW
 Token Type: NUM, Value: 1, StrValue: 1
 Token Type: EOL, Value: 0, StrValue: 
 
-Token Type: PSD, Value: 13, StrValue: .END
-Token Type: EOL, Value: 0, StrValue: 
-
-Token Type: PSD, Value: 13, StrValue: .ORIG
-Token Type: IMM, Value: 16384, StrValue: x4000
-Token Type: EOL, Value: 0, StrValue: 
-
 Token Type: OP, Value: 10, StrValue: LDI
 Token Type: REG, Value: 0, StrValue: R0
 Token Type: CM, Value: 0, StrValue: ,
@@ -262,6 +236,12 @@ Token Type: OP, Value: 14, StrValue: LEA
 Token Type: REG, Value: 0, StrValue: R0
 Token Type: CM, Value: 0, StrValue: ,
 Token Type: LBL, Value: 0, StrValue: WOW
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: PUTS
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: HALT
 Token Type: EOL, Value: 0, StrValue: 
 
 Token Type: LBL, Value: 0, StrValue: ADDR

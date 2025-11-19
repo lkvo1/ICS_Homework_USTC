@@ -1,6 +1,0 @@
-# ninja log v5
-32	1050	7852305933984561	CMakeFiles/lc3-assembler.dir/src/main.cpp.obj	de07c3cf6b8f972f
-30	538	7851977928338453	CMakeFiles/assembler.dir/src/tokenizer.cpp.obj	17c78e69ea107446
-1068	2467	7852305948158240	libassembler.a	89820a7e614443b0
-606	946	7851977932316268	lc3-assembler.exe	a61ff266f5f02f7
-29	1068	7852305934155203	CMakeFiles/assembler.dir/src/parser.cpp.obj	e27fa2feb5fcd559
