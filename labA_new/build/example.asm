@@ -1,16 +1,16 @@
         .ORIG x3000
         
-LEA R0, HACKER
+LEA R0, AAA
 TRAP x30
-PUTSP
-
-HACKER
+SHABI
+         .BLKW 2
+        LEA R0, SHABI
         .FILL x0033
         .FILL x0033
         .FILL x0033
-        .FILL x0033
-        .FILL x0033
-        .FILL x0033
+ AAA       .STRINGZ "aaa"
+ 
+ NAOZI  .FILL x0044
         .FILL x0033
         .FILL x0033
         .FILL x0033
@@ -63,8 +63,6 @@ SAVED_R2 .BLKW 1
         .ORIG x4000
 LDI R0, ADDR
 LEA R0, WOW
-PUTS
-HALT
 ADDR .FILL x1
 WOW .STRINGZ "My favourite musician is Silentroom."
         .END

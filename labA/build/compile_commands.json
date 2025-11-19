@@ -1,0 +1,14 @@
+[
+{
+  "directory": "F:/Huobin/Materials/ICS/ICS_Homework_USTC/labA/build",
+  "command": "F:\\w64devkit\\bin\\g++.exe -DUSE_CPP -IF:/Huobin/Materials/ICS/ICS_Homework_USTC/labA/include -g -std=gnu++11 -o CMakeFiles\\assembler.dir\\src\\parser.cpp.obj -c F:\\Huobin\\Materials\\ICS\\ICS_Homework_USTC\\labA\\src\\parser.cpp",
+  "file": "F:/Huobin/Materials/ICS/ICS_Homework_USTC/labA/src/parser.cpp",
+  "output": "F:/Huobin/Materials/ICS/ICS_Homework_USTC/labA/build/CMakeFiles/assembler.dir/src/parser.cpp.obj"
+},
+{
+  "directory": "F:/Huobin/Materials/ICS/ICS_Homework_USTC/labA/build",
+  "command": "F:\\w64devkit\\bin\\g++.exe -DUSE_CPP -IF:/Huobin/Materials/ICS/ICS_Homework_USTC/labA/include -g -std=gnu++11 -o CMakeFiles\\lc3-assembler.dir\\src\\main.cpp.obj -c F:\\Huobin\\Materials\\ICS\\ICS_Homework_USTC\\labA\\src\\main.cpp",
+  "file": "F:/Huobin/Materials/ICS/ICS_Homework_USTC/labA/src/main.cpp",
+  "output": "F:/Huobin/Materials/ICS/ICS_Homework_USTC/labA/build/CMakeFiles/lc3-assembler.dir/src/main.cpp.obj"
+}
+]

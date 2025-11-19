@@ -5,6 +5,7 @@
 LC3Tools/
 .idea/
 .venv/
+labA_before/
 # But add questions.pdf back
 !hw1/hw1_questions.pdf
 !hw2/hw2_questions.pdf

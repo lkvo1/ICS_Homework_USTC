@@ -1,0 +1,5 @@
+F:/Huobin/Materials/ICS/ICS_Homework_USTC/build/CMakeFiles/assembler.dir
+F:/Huobin/Materials/ICS/ICS_Homework_USTC/build/CMakeFiles/lc3-assembler.dir
+F:/Huobin/Materials/ICS/ICS_Homework_USTC/build/CMakeFiles/test.dir
+F:/Huobin/Materials/ICS/ICS_Homework_USTC/build/CMakeFiles/edit_cache.dir
+F:/Huobin/Materials/ICS/ICS_Homework_USTC/build/CMakeFiles/rebuild_cache.dir

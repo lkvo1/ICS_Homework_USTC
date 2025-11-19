@@ -1,0 +1,280 @@
+Token Type: PSD, Value: 13, StrValue: .ORIG
+Token Type: IMM, Value: 12288, StrValue: x3000
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 14, StrValue: LEA
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: AAA
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 15, StrValue: TRAP
+Token Type: IMM, Value: 48, StrValue: x30
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: SHABI
+Token Type: PSD, Value: 13, StrValue: .BLKW
+Token Type: NUM, Value: 2, StrValue: 2
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 14, StrValue: LEA
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: SHABI
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: AAA
+Token Type: PSD, Value: 13, StrValue: .STRINGZ
+Token Type: STR, Value: 0, StrValue: aaa
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: NAOZI
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 68, StrValue: x0044
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 51, StrValue: x0033
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 2, StrValue: LD
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: HACK
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 12, StrValue: JMP
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: HACK
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 16384, StrValue: x4000
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 0, StrValue: x0000
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .END
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .ORIG
+Token Type: IMM, Value: 48, StrValue: x30
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 2352, StrValue: x930
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .END
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .ORIG
+Token Type: IMM, Value: 2352, StrValue: x930
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 3, StrValue: ST
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: SAVED_R0
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 3, StrValue: ST
+Token Type: REG, Value: 1, StrValue: R1
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: SAVED_R1
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 3, StrValue: ST
+Token Type: REG, Value: 2, StrValue: R2
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: SAVED_R2
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 2, StrValue: LD
+Token Type: REG, Value: 1, StrValue: R1
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: PROMPT_ADDR
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: LOOP
+Token Type: OP, Value: 6, StrValue: LDR
+Token Type: REG, Value: 2, StrValue: R2
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: IMM, Value: 0, StrValue: x0
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 7, StrValue: STR
+Token Type: REG, Value: 2, StrValue: R2
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: REG, Value: 1, StrValue: R1
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: IMM, Value: 0, StrValue: x0
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 0, StrValue: BRz
+Token Type: LBL, Value: 0, StrValue: LEAVE
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 1, StrValue: ADD
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: IMM, Value: 1, StrValue: x1
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 1, StrValue: ADD
+Token Type: REG, Value: 1, StrValue: R1
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: REG, Value: 1, StrValue: R1
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: IMM, Value: 1, StrValue: x1
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 0, StrValue: BR
+Token Type: LBL, Value: 0, StrValue: LOOP
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 2, StrValue: LD
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: SAVED_R0
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 2, StrValue: LD
+Token Type: REG, Value: 1, StrValue: R1
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: SAVED_R1
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 2, StrValue: LD
+Token Type: REG, Value: 2, StrValue: R2
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: SAVED_R2
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: LEAVE
+Token Type: OP, Value: 8, StrValue: RTI
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: PROMPT_ADDR
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 812, StrValue: x032c
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: SAVED_R0
+Token Type: PSD, Value: 13, StrValue: .BLKW
+Token Type: NUM, Value: 1, StrValue: 1
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: SAVED_R1
+Token Type: PSD, Value: 13, StrValue: .BLKW
+Token Type: NUM, Value: 1, StrValue: 1
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: SAVED_R2
+Token Type: PSD, Value: 13, StrValue: .BLKW
+Token Type: NUM, Value: 1, StrValue: 1
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .END
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .ORIG
+Token Type: IMM, Value: 16384, StrValue: x4000
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 10, StrValue: LDI
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: ADDR
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: OP, Value: 14, StrValue: LEA
+Token Type: REG, Value: 0, StrValue: R0
+Token Type: CM, Value: 0, StrValue: ,
+Token Type: LBL, Value: 0, StrValue: WOW
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: ADDR
+Token Type: PSD, Value: 13, StrValue: .FILL
+Token Type: IMM, Value: 1, StrValue: x1
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: LBL, Value: 0, StrValue: WOW
+Token Type: PSD, Value: 13, StrValue: .STRINGZ
+Token Type: STR, Value: 0, StrValue: My favourite musician is Silentroom.
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: PSD, Value: 13, StrValue: .END
+Token Type: EOL, Value: 0, StrValue: 
+
+Token Type: EOF, Value: 0, StrValue: EOF
