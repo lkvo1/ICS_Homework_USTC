@@ -18,7 +18,7 @@ public:
     void secondPass();  // 第二遍扫描，生成指令列表
     void addInstruction(const Instruction ins) { instructions_.push_back(ins); }   // 添加指令
     std::vector<Instruction> getInstructions() const { return instructions_; }       // 获取指令列表
-    void assemble();    // 汇编生成机器码
+    void assemble(const std::string& outputFilePath);    // 汇编生成机器码
     void addSymbol(std::string symbol, uint16_t address) { symbol_table_[symbol] = address; }
     void displaySymbolTable() const;
     void displayInstructions() const;

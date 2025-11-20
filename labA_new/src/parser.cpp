@@ -24,7 +24,7 @@ void Parser::displayInstructions() const {
 
 void Parser::firstPass(const std::vector<Token>& tokens) {
     uint16_t pc = 0;    // 地址计数器
-    bool blkwMode = false, strzMode = false;
+    bool blkwMode = false, strzMode = false, origMode = false;
     const Token* prevToken = nullptr;
     Instruction currentInstruction = Instruction();
     for (const Token& token : tokens) {
@@ -35,6 +35,7 @@ void Parser::firstPass(const std::vector<Token>& tokens) {
 
         // 处理开始地址伪指令
         if (token.getType() == TokenType::IMM && prevToken != nullptr && prevToken->getStrValue() == ".ORIG") {
+            origMode = true;
             pc = static_cast<uint16_t>(token.getValue()) - 1; // -1 抵消下一个EOL
         }
 
@@ -59,7 +60,8 @@ void Parser::firstPass(const std::vector<Token>& tokens) {
         // 每遇到一个EOL, 表示当前指令已经装填完毕, 地址计数器加1, 下一次循环处理下一个指令
         if (token.getType() == TokenType::EOL) {
             // 此时指令已经完整, 设置地址并保存到指令表中, 然后重置当前指令
-            currentInstruction.setAddress(pc);
+            if (origMode) { currentInstruction.setAddress(pc + 1); origMode = false; } 
+            else currentInstruction.setAddress(pc);
             addInstruction(currentInstruction);
             currentInstruction = Instruction();
 
@@ -102,9 +104,9 @@ void Parser::secondPass() {
                         std::cout <<static_cast<uint16_t>(0) << '\t' <<std::bitset<16>(static_cast<uint16_t>(0)) << " \\0" << std::endl;
                         machineCode_.push_back(0); // 分配的空间初始化为0
                     }
-                } else if (ins.getTokens()[0].getStrValue() == ".ORIG") {
-                    continue;
-                } else if (ins.getTokens()[0].getStrValue() == ".END") { 
+                } // else if (ins.getTokens()[0].getStrValue() == ".ORIG") {
+                    // continue;} 
+                else if (ins.getTokens()[0].getStrValue() == ".END") { 
                     break; // 汇编结束
                 } else {
                     machineCode_.push_back(toMachineCode(ins));
@@ -308,37 +310,36 @@ uint16_t Parser::toMachineCode(const Instruction& ins) {
     if (tokens[0].getStrValue() == ".FILL") {
         mCode |= (tokens[1].getValue() & 0xFFFF);
     }
-    // if (tokens[0].getStrValue() == ".ORIG") {
-    //     mCode |= (tokens[1].getValue() & 0xFFFF);
-    // }
-    // Stringz 和 Blkw 需要生成多条机器码, 需要在外部处理, 而且.END和.ORIG不生成机器码
+    // 注意此处处理.ORIG伪指令, 直接将地址写入机器码, 因为不知道lc3tools所需的obj文件格式, 因此将.ORIG的地址写入文件, 这样输出的bin文件才能运行。
+    if (tokens[0].getStrValue() == ".ORIG") {
+        mCode |= (tokens[1].getValue() & 0xFFFF);
+    }
+    //Stringz 和 Blkw 需要生成多条机器码, 需要在外部处理, 而且.END和.ORIG不生成机器码
     // debug: 打印mCode
     std::cout << static_cast<uint16_t>(mCode) << "\t" << std::bitset<16>(mCode) << std::endl;
     return mCode;
 }
 
-void Parser::assemble() {
-    // 以文本方式打开输出文件, 输出格式为 (地址) 二进制机器码
-    std::ofstream outfile("output.obj");
+void Parser::assemble(const std::string& outputFilePath) {
+    std::ofstream outfile(outputFilePath);
 
     if (!outfile) {
         std::cerr << "Error: Unable to open output file." << std::endl;
         return;
     }
 
-    // 获取起始地址（从第一条指令获取，通常是 .ORIG 指定的地址）
+    // 获取起始地址
     uint16_t start_address = 0;
     if (!instructions_.empty()) {
-        start_address = instructions_[1].getAddress();
+        start_address = instructions_[0].getAddress();
         std::cout << "Start Address: 0x" << std::hex << start_address << std::dec << std::endl;
     }
-
-    // 遍历所有机器码，输出格式为：(地址) 16位二进制字符串
     for (int i = 0; i < machineCode_.size(); ++i) {
-        outfile  << std::hex << std::uppercase << (start_address + i) << ' '
-                << std::bitset<16>(machineCode_[i]) << '\n';
+        // outfile  << std::hex << std::uppercase << (start_address + i) << std::bitset<16>(machineCode_[i]);
+        outfile << std::bitset<16>(machineCode_[i]) << '\n';
+        std::cout << 'x' << std::hex << std::uppercase << (i == 0 ? start_address : start_address + i - 1) << ' '<< std::bitset<16>(machineCode_[i]) << std::dec << std::endl;
     }
 
     outfile.close();
-    std::cout << "Assembly completed. Output written to output.obj" << std::endl;
+    std::cout << "Assembly completed. Output written to " << outputFilePath << std::endl;
 }

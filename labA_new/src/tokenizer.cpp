@@ -11,16 +11,24 @@ bool isImmType(const std::string& str) {
     if (str.empty()) return false;
     if (str[0] == '#') {
         // 十进制
-        for (int i = 1; i < str.size(); ++i) {
+        int start = 1;
+        if (str.size() > 1 && (str[1] == '-' || str[1] == '+')) {
+            start = 2;
+        }
+        for (int i = start; i < str.size(); ++i) {
             if (!isdigit(str[i])) return false;
         }
-        return str.size() > 1;
+        return str.size() > start;
     } else if (str[0] == 'x' || str[0] == 'X') {
         // 十六进制
-        for (int i = 1; i < str.size(); ++i) {
+        int start = 1;
+        if (str.size() > 1 && str[1] == '-') {
+            start = 2;
+        }
+        for (int i = start; i < str.size(); ++i) {
             if (!isxdigit(str[i])) return false;
         }
-        return str.size() > 1;
+        return str.size() > start;
     } else if (str[0] == 'B' || str[0] == 'b') {
         // 二进制
         for (int i = 1; i < str.size(); ++i) {

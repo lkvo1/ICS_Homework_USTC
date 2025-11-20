@@ -2,10 +2,23 @@
 #include "instruction.h"
 #include "parser.h"
 #include "tokenizer.h"
+#include "CLI11.hpp"
 
-int main() {
+int main(int argc, char** argv) {
+    CLI::App app{"LC-3 Assembler"};
+
+    std::string asmFilePath;
+    std::string outputFilePath = "output.bin";
+
+    app.add_option("-i,--input", asmFilePath, "Input assembly file")
+        ->required()
+        ->check(CLI::ExistingFile);
+    
+    app.add_option("-o,--output", outputFilePath, "Output machine code file");
+
+    CLI11_PARSE(app, argc, argv);
+
     // 格式化汇编文件
-    std::string asmFilePath = "test.asm";
     formatAssembly(asmFilePath);
 
     std::string formattedFilePath = asmFilePath + ".fmt";
@@ -17,6 +30,6 @@ int main() {
     Parser parser;
     parser.firstPass(tokens);
     parser.secondPass();
-    parser.assemble();
+    parser.assemble(outputFilePath);
     return 0;
 }

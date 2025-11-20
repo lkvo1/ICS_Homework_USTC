@@ -8,7 +8,7 @@ LC3Tools/
 labA_before/
 labA_new/.vscode/
 labA_new/build/
-
+.vscode/
 # But add questions.pdf back
 !hw1/hw1_questions.pdf
 !hw2/hw2_questions.pdf
