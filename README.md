@@ -17,3 +17,5 @@ All experiments and homework for Fall 2025 have been completed. For the experime
 Answers are for reference only.
 
 Course Homepage: https://acsa.ustc.edu.cn/ics/
+
+![](ustc.png)
